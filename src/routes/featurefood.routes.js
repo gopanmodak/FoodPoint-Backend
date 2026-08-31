@@ -1,45 +1,43 @@
 const express = require("express");
 const router = express.Router();
 
-const banglaFood = require("../data/BanglaFood.json");
+const featureFood = require("../data/FeatureFood.json");
 
 module.exports = (db) => {
-  const bestFoodCollection = db.collection("bestFood");
+  const featureFoodCollection = db.collection("featureFood");
   //post methode
+
   router.post("/", async (req, res) => {
     try {
-      const count = await bestFoodCollection.countDocuments();
+      const count = await featureFoodCollection.countDocuments();
       if (count > 0) {
         return res.status(400).send({
-          message: "data already added",
+          message: "Data already added",
         });
       }
-
-      const result = await bestFoodCollection.insertMany(banglaFood);
+      const result = await featureFoodCollection.insertMany(featureFood);
       res.status(200).send({
-        message: "Data added",
         insertedCount: result.insertedCount,
       });
     } catch (error) {
       res.status(500).send({
-        message: "Data fetch failed",
+        message: "Data Fetch failed 2",
         error: error.message,
       });
     }
   });
-
-  //get
 
   router.get("/", async (req, res) => {
     try {
-      const result = await bestFoodCollection.find().toArray();
+      const result = await featureFoodCollection.find().toArray();
       res.status(200).send(result);
     } catch (error) {
       res.status(500).send({
-        message: "Data did not found",
+        message: "Data Fetch failed",
         error: error.message,
       });
     }
   });
+
   return router;
 };

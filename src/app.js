@@ -1,22 +1,28 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
 
 //database connecttion
 
-const {connectDB,getDB} =require('./db.js');
-const BbbqFood = require('./routes/bbq.routes.js');
+const { connectDB, getDB } = require("./db.js");
+//router to define
+const bbqFood = require("./routes/bbq.routes.js");
+const banglaFood = require("./routes/banglaFood.routes.js")
+const featureFood = require("./routes/featurefood.routes.js")
 
 const startServer = async () => {
-  try{
+  try {
     await connectDB();
-  const db=getDB();
-
-  app.use('/bbqfood',BbbqFood(db))
-  }catch(error){
-    console.log('Server failed to start',error.message);
+    const db = getDB();
+    
+    //api 
+    app.use("/bbq",bbqFood(db))
+    app.use("/banglafood", banglaFood(db))
+    app.use('/featurefood', featureFood(db))
+  } catch (error) {
+    console.log("Server failed to start", error.message);
   }
-}
+};
 
 startServer();
 
