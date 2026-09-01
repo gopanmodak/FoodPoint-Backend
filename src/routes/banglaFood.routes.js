@@ -5,7 +5,7 @@ const banglaFood = require("../data/BanglaFood.json");
 
 module.exports = (db) => {
   const bestFoodCollection = db.collection("bestFood");
-  //post methode
+  //POST methode
   router.post("/", async (req, res) => {
     try {
       const count = await bestFoodCollection.countDocuments();
@@ -28,7 +28,7 @@ module.exports = (db) => {
     }
   });
 
-  //get methode
+  //GET methode
 
   router.get("/", async (req, res) => {
     try {

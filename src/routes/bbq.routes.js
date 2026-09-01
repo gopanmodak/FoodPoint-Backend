@@ -4,7 +4,7 @@ const router = express.Router();
 const bbqFood = require("../data/bbqs.json");
 
 module.exports = (db) => {
-  //post methode
+  //POST methode
   const bbqCollection = db.collection("bbqs");
   router.post("/", async (req, res) => {
     try {
@@ -27,7 +27,7 @@ module.exports = (db) => {
     }
   });
 
-  //get methode
+  //GET methode
 
   router.get("/", async (req, res) => {
     try {

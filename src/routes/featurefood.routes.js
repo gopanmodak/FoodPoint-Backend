@@ -5,7 +5,7 @@ const featureFood = require("../data/FeatureFood.json");
 
 module.exports = (db) => {
   const featureFoodCollection = db.collection("featureFood");
-  //post methode
+  //POST methode
 
   router.post("/", async (req, res) => {
     try {
@@ -26,6 +26,8 @@ module.exports = (db) => {
       });
     }
   });
+
+  //GET methode
 
   router.get("/", async (req, res) => {
     try {
