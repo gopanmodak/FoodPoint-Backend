@@ -29,6 +29,10 @@ const startServer = async () => {
   try {
     await connectDB();
     const db = getDB();
+
+    app.get("/", (req, res)=> {
+      res.send(`Welcome to the Food API Server v1.0 (bbqs, banglafoods, featurefoods, breads, bestfoods, burgers, chocolates, desserts, steaks, drinks, friedchicken, icecream, indianfoods, ourfoods, pizzas, sandwiches, sausages)`)
+    })
     
     //api endpoints
     app.use("/bbqs",bbqFood(db))
