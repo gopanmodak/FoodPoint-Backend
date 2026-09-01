@@ -28,7 +28,7 @@ module.exports = (db) => {
     }
   });
 
-  //get
+  //get methode
 
   router.get("/", async (req, res) => {
     try {
