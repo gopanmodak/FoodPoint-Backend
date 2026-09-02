@@ -31,7 +31,7 @@
     "price": 320,
     "discountPrice": 280,
     "category": { "_id": "66c456def789abc123", "name": "Biryani" },
-    "image": "https://images.unsplash.com/photo-1631515243472-422e42ca2f6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_548/tk%2Fphoto%2F2025%2F11-2025%2F2025-11-shrimp-gumbo%2Fshrimp-gumbo-204",
     "images": [
       "https://images.unsplash.com/photo-1599045118108-bf25d2a6a1b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1549300109-c7c9cf6c8fe0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
