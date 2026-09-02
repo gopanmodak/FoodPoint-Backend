@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const sausages = require("../data/Sausage.json");
+console.log(sausages)
 
 module.exports = (db) => {
   const sausagesCollection = db.collection("sausages");

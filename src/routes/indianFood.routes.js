@@ -3,6 +3,7 @@ const router = express.Router();
 
 const indianFoods = require("../data/IndianFood.json");
 
+
 module.exports = (db) => {
   const indianFoodsCollection = db.collection("indianFoods");
 
