@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173",],
+    origin: ["http://localhost:5173","https://food-point-bay.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
@@ -34,6 +34,7 @@ const ourFoods = require("./routes/ourFood.routes.js");
 const pizza = require("./routes/pizza.routes.js");
 const sandwich = require("./routes/sandwich.routes.js");
 const sausages = require("./routes/sausage.routes.js");
+const menu = require("./routes/menu.routes.js");
 
 const startServer = async () => {
   try {
@@ -64,6 +65,7 @@ const startServer = async () => {
     app.use("/pizza", pizza(db));
     app.use("/sandwiches", sandwich(db));
     app.use("/sausages", sausages(db));
+    app.use("/menu", menu(db));
   } catch (error) {
     console.log("Server failed to start", error.message);
   }

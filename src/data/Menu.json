@@ -1,0 +1,542 @@
+[
+  {
+    "id": 101,
+    "name": "Chilli Paneer",
+    "category": "Starters",
+    "description": "Soft, succulent paneer cubes are perfectly tossed in a fiery, tangy sauce with vibrant bell peppers, crisp onions, and a robust hint of ginger-garlic that creates an irresistible appetizer bursting with bold flavors.",
+    "price": 250,
+    "image": "https://images.unsplash.com/photo-1633945274405-b6c2428a3a6a?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 102,
+    "name": "Masala Dosa",
+    "category": "Starters",
+    "description": "Crispy, golden-brown fermented crepe is generously filled with a spiced, flavorful potato mixture and served alongside refreshing coconut chutney and aromatic sambar for a complete South Indian feast.",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f56a3f2b?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 103,
+    "name": "Idli Sambar",
+    "category": "Starters",
+    "description": "Soft, fluffy steamed rice cakes are perfectly paired with a flavorful, aromatic lentil and vegetable stew, creating a light, healthy, and incredibly satisfying breakfast or snack combination.",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f56a3f2b?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 104,
+    "name": "Pappad",
+    "category": "Starters",
+    "description": "Thin, crispy lentil wafers are roasted or fried to a perfect golden crunch, serving as a deliciously light and addictive accompaniment that adds texture and flavor to any Indian meal.",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 105,
+    "name": "Butter Chicken",
+    "category": "Main Course",
+    "description": "Tender, juicy chicken pieces are simmered in a luxuriously rich, creamy tomato gravy infused with butter and a medley of aromatic spices, creating a truly indulgent and satisfying main course.",
+    "price": 320,
+    "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 106,
+    "name": "Paneer Butter Masala",
+    "category": "Main Course",
+    "description": "Soft, velvety cottage cheese cubes are gently simmered in a smooth, buttery tomato gravy with a harmonious blend of Indian spices, creating a rich, creamy, and utterly delicious vegetarian delight.",
+    "price": 280,
+    "image": "https://images.unsplash.com/photo-1633945274405-b6c2428a3a6a?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 107,
+    "name": "Dal Tadka",
+    "category": "Main Course",
+    "description": "Rich, creamy yellow lentils are simmered to perfection with aromatic spices, then tempered with sizzling ghee, garlic, and a final burst of smoky flavor that elevates this classic comfort dish.",
+    "price": 200,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 108,
+    "name": "Rasam",
+    "category": "Main Course",
+    "description": "Tangy, spicy South Indian soup is masterfully crafted with tangy tamarind, ripe tomatoes, and a fragrant blend of traditional spices, creating a comforting, soul-warming bowl of pure goodness.",
+    "price": 140,
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 109,
+    "name": "Chicken Biryani",
+    "category": "Main Course",
+    "description": "Fragrant, premium basmati rice is masterfully layered with succulent, spice-marinated chicken, crispy fried onions, and aromatic saffron, then slow-cooked to perfection in the traditional dum style.",
+    "price": 350,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 110,
+    "name": "Veg Biryani",
+    "category": "Main Course",
+    "description": "Aromatic basmati rice is beautifully layered with an assortment of fresh, colorful vegetables, fragrant mint, and whole spices, then slow-cooked to create a flavorful, satisfying vegetarian biryani.",
+    "price": 280,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 111,
+    "name": "Steamed Rice",
+    "category": "Rice & Breads",
+    "description": "Fluffy, perfectly cooked long-grain basmati rice is carefully steamed to achieve a light, separate grain texture, making it the ideal wholesome companion to any rich curry or spicy side dish.",
+    "price": 180,
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 112,
+    "name": "Peas Pulao",
+    "category": "Rice & Breads",
+    "description": "Fragrant, long-grain basmati rice is delicately cooked with sweet green peas, whole aromatic spices, and a refreshing hint of mint, resulting in a delightful, flavorful one-pot rice dish.",
+    "price": 220,
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 113,
+    "name": "Lemon Rice",
+    "category": "Rice & Breads",
+    "description": "Fluffy rice is beautifully tempered with zesty lemon juice, aromatic mustard seeds, fragrant curry leaves, and crunchy peanuts, creating a tangy, flavorful, and utterly satisfying dish.",
+    "price": 150,
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 114,
+    "name": "Tamarind Rice",
+    "category": "Rice & Breads",
+    "description": "Tangy, sweet tamarind pulp is perfectly blended with fluffy rice, crunchy peanuts, and aromatic spices, creating a deliciously complex, flavorful South Indian rice dish that's simply irresistible.",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 115,
+    "name": "Curd Rice",
+    "category": "Rice & Breads",
+    "description": "Cooling, creamy yogurt is lovingly mixed with soft rice and tempered with aromatic mustard seeds, fragrant curry leaves, and finished with a generous garnish of fresh coriander for a soothing dish.",
+    "price": 160,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 116,
+    "name": "Naan",
+    "category": "Rice & Breads",
+    "description": "Soft, pillowy leavened bread is expertly baked in a traditional tandoor until perfectly charred on the outside, with a tender, fluffy interior that's ideal for scooping up delicious curries.",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 117,
+    "name": "Garlic Naan",
+    "category": "Rice & Breads",
+    "description": "Tandoor-baked naan bread is generously brushed with aromatic garlic-infused butter and garnished with fresh coriander, delivering a delightful, savory flavor in every warm, fluffy bite.",
+    "price": 80,
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 118,
+    "name": "Roti",
+    "category": "Rice & Breads",
+    "description": "Whole wheat unleavened bread is expertly cooked on a hot griddle until soft and lightly blistered, creating a warm, wholesome flatbread that perfectly complements any Indian curry or vegetable dish.",
+    "price": 40,
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 119,
+    "name": "Phulka",
+    "category": "Rice & Breads",
+    "description": "Soft, whole wheat Indian flatbread is expertly cooked on an open flame until it puffs up beautifully, delivering a light, smoky flavor and a delightfully chewy texture that complements any meal.",
+    "price": 120,
+    "image": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 120,
+    "name": "Gulab Jamun",
+    "category": "Desserts",
+    "description": "Soft, spongy milk solids are lovingly kneaded and deep-fried to a golden brown, then soaked in a fragrant, rose-scented sugar syrup that makes every bite melt-in-your-mouth delicious.",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 121,
+    "name": "Jalebi",
+    "category": "Desserts",
+    "description": "Crispy, golden spirals of fermented batter are deep-fried to a perfect crunch and immediately soaked in aromatic sugar syrup, creating a sweet, sticky, and utterly irresistible Indian dessert.",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 122,
+    "name": "Rasgulla",
+    "category": "Desserts",
+    "description": "Soft, spongy cottage cheese balls are gently cooked in a light, delicate sugar syrup, creating a heavenly dessert that is wonderfully light, refreshing, and simply melts in your mouth.",
+    "price": 110,
+    "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 123,
+    "name": "Mango Lassi",
+    "category": "Beverages",
+    "description": "A refreshing, creamy blend of ripe, sweet mangoes and smooth yogurt is perfectly chilled and infused with a subtle hint of cardamom, creating a delightful summer drink that's both tangy and sweet.",
+    "price": 130,
+    "image": "https://images.unsplash.com/photo-1590736969954-5e3413b9f895?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 124,
+    "name": "Sweet Lassi",
+    "category": "Beverages",
+    "description": "Creamy, thick yogurt is beautifully whisked with sugar and a touch of fragrant cardamom, resulting in a smooth, sweet, and refreshing drink that cools and soothes on a warm day.",
+    "price": 100,
+    "image": "https://images.unsplash.com/photo-1590736969954-5e3413b9f895?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 125,
+    "name": "Salt Lassi",
+    "category": "Beverages",
+    "description": "A savory, smooth yogurt drink is expertly blended with roasted cumin, black salt, and fresh mint leaves, offering a perfectly balanced, cooling beverage that's both refreshing and flavorful.",
+    "price": 90,
+    "image": "https://images.unsplash.com/photo-1590736969954-5e3413b9f895?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 126,
+    "name": "Masala Chai",
+    "category": "Beverages",
+    "description": "Rich, aromatic Indian spiced tea is perfectly brewed with premium black tea, creamy milk, and a warming blend of traditional spices, creating a comforting, invigorating cup of chai bliss.",
+    "price": 60,
+    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 127,
+    "name": "Filter Coffee",
+    "category": "Beverages",
+    "description": "Authentic South Indian filter coffee is expertly brewed using dark, aromatic roasted beans and creamy milk, delivering a rich, bold, and frothy cup of pure coffee perfection.",
+    "price": 70,
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 128,
+    "name": "Coconut Chutney",
+    "category": "Chutneys & Sides",
+    "description": "Fresh, creamy coconut is expertly ground with green chilies and roasted chickpeas, creating a smooth, flavorful chutney that perfectly complements dosas, idlis, and other South Indian delicacies.",
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 129,
+    "name": "Tomato Chutney",
+    "category": "Chutneys & Sides",
+    "description": "Ripe, juicy tomatoes are slow-cooked with aromatic garlic and a sizzling tempering of mustard seeds, resulting in a spicy, tangy chutney that adds vibrant flavor to any meal.",
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  },
+  {
+    "id": 130,
+    "name": "Mint Chutney",
+    "category": "Chutneys & Sides",
+    "description": "Fresh mint leaves and coriander are expertly blended with zesty green chilies and tangy lemon juice, creating a vibrant, refreshing green chutney that brightens up every dish.",
+    "price": 50,
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop",
+    "nutrition": {
+      "calories": 480,
+      "totalFat": "20g",
+      "cholesterol": "60mg",
+      "sodium": "220mg",
+      "totalCarbohydrates": "71g",
+      "protein": "5g",
+      "caffeine": "80mg",
+      "disclaimer": "* 2,000 calories a day is used for general nutrition advice, but calorie needs vary."
+    }
+  }
+]
