@@ -1,7 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
-const menu = require("../data/menu.json");
+const menu = require("../data/Menu.json");
 
 module.exports = (db) => {
   const menuCollection = db.collection("menu");
