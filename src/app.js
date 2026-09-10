@@ -1,13 +1,15 @@
 const express = require("express");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
 //middleware
 app.use(express.json());
+app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173","https://food-point-bay.vercel.app"],
+    origin: ["http://localhost:5173", "https://food-point-bay.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),
@@ -35,6 +37,9 @@ const pizza = require("./routes/pizza.routes.js");
 const sandwich = require("./routes/sandwich.routes.js");
 const sausages = require("./routes/sausage.routes.js");
 const menu = require("./routes/menu.routes.js");
+const signin = require("./routes/signin.routes.js");
+const faq = require("./routes/faq.routes.js");
+
 
 const startServer = async () => {
   try {
@@ -66,6 +71,9 @@ const startServer = async () => {
     app.use("/sandwiches", sandwich(db));
     app.use("/sausages", sausages(db));
     app.use("/menu", menu(db));
+  
+    app.use("/faq", faq(db));
+    app.use('/signin',signin())
   } catch (error) {
     console.log("Server failed to start", error.message);
   }

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "question": "What kind of food is available on this website?",
+    "answer": "We primarily offer traditional Bangladeshi dishes—Biryani, Polao, Morog Polao, Beef Kala Bhuna, Tehari, Akhni Polao, Mutton Rezala, Bhuna Khichuri, Duck Curry, Hilsa, Chingri Malaikari, Rui, Pabda, various Bhortas, street food, Pitha, sweets, and desserts. Everything is prepared according to our own recipes."
+  },
+  {
+    "id": 2,
+    "question": "Is the food halal?",
+    "answer": "Yes, all our meat and ingredients are 100% halal. We source meat from halal-certified suppliers and follow halal practices during cooking."
+  },
+  {
+    "id": 3,
+    "question": "Is the food restaurant-style or homemade?",
+    "answer": "We cook home-style, but in a professional kitchen. Our experienced chefs use traditional Bangladeshi cooking methods to preserve the authentic homemade taste."
+  },
+  {
+    "id": 4,
+    "question": "Do you use preservatives or chemicals in the food?",
+    "answer": "No, we do not use any artificial preservatives, colors, or flavor enhancers. Everything is cooked fresh daily with fresh ingredients."
+  },
+  {
+    "id": 5,
+    "question": "Do the food photos match the actual food?",
+    "answer": "The photos represent our dishes. However, since everything is handmade, there may be slight variations (e.g., garnish, color depth). The taste and quality remain consistent."
+  },
+  {
+    "id": 6,
+    "question": "How do I place an order?",
+    "answer": "Select your food on the website, add it to the cart, provide your delivery address, choose a payment method, and confirm your order. You will receive an SMS/email confirmation once the order is placed."
+  },
+  {
+    "id": 7,
+    "question": "What payment options are available?",
+    "answer": "bKash, Nagad, Rocket, credit/debit cards, and Cash on Delivery (for selected areas)."
+  },
+  {
+    "id": 8,
+    "question": "Is Cash on Delivery available everywhere?",
+    "answer": "Cash on Delivery is available inside Dhaka city. Outside Dhaka, advance payment is required, or Cash on Delivery may be possible through specific courier partners."
+  },
+  {
+    "id": 9,
+    "question": "What is the minimum order amount?",
+    "answer": "Generally 300 BDT. However, some items may have a different minimum. It will be shown at checkout."
+  },
+  {
+    "id": 10,
+    "question": "Can I cancel or modify my order?",
+    "answer": "You can cancel within 15 minutes of order confirmation. Once cooking has started, cancellation is not possible. For modifications, please call our hotline."
+  },
+  {
+    "id": 11,
+    "question": "How do I use a discount code?",
+    "answer": "Enter the code in the 'Discount Code' box on the checkout page and click Apply. Terms and conditions apply."
+  },
+  {
+    "id": 12,
+    "question": "Are taxes and delivery charges included in the price?",
+    "answer": "Product prices include taxes. Delivery charges are separate and will be added at checkout."
+  },
+  {
+    "id": 13,
+    "question": "Which areas do you deliver to?",
+    "answer": "We deliver all over Bangladesh. Inside Dhaka city, we have our own delivery team; outside Dhaka, we use trusted courier services (e.g., Sundarban, Pathao, RedX)."
+  },
+  {
+    "id": 14,
+    "question": "What are the delivery charges?",
+    "answer": "Inside Dhaka: 60–100 BDT (depending on area). Outside Dhaka: 150–400 BDT depending on weight."
+  },
+  {
+    "id": 15,
+    "question": "How long does delivery take?",
+    "answer": "Inside Dhaka: 2–4 hours. Outside Dhaka: 24–48 hours (courier may take 2–3 days)."
+  },
+  {
+    "id": 16,
+    "question": "Does the food arrive hot?",
+    "answer": "Inside Dhaka, we deliver hot food in insulated bags. For outside Dhaka, food may arrive cold via courier; in that case, reheating instructions are provided."
+  },
+  {
+    "id": 17,
+    "question": "Can I choose a delivery time?",
+    "answer": "Yes, at checkout you can select a specific time slot (e.g., 11 AM–1 PM, 5 PM–7 PM)."
+  },
+  {
+    "id": 18,
+    "question": "Can I track my order?",
+    "answer": "Yes, after order confirmation you will receive a tracking link. You can also track it on our website's 'Track Order' page using your order ID."
+  },
+  {
+    "id": 19,
+    "question": "How do I contact the delivery person?",
+    "answer": "Once the order is out for delivery, you will receive the delivery person's name and phone number via SMS."
+  },
+  {
+    "id": 20,
+    "question": "What if I am not available at the time of delivery?",
+    "answer": "The delivery person will wait for 10 minutes. If the food is returned, an additional charge may apply for re-delivery."
+  },
+  {
+    "id": 21,
+    "question": "Is the food fresh?",
+    "answer": "We start cooking every morning and pack according to orders. We do not pre-cook and freeze food (except some sweets)."
+  },
+  {
+    "id": 22,
+    "question": "What is the shelf life of the food?",
+    "answer": "Best consumed within 4–6 hours of cooking. If refrigerated, it stays good for up to 24 hours. Sweets stay good for 2–3 days."
+  },
+  {
+    "id": 23,
+    "question": "How should I reheat the food?",
+    "answer": "Microwave for 1–2 minutes, or heat in a covered pan on low flame. For Polao/Biryani, sprinkle a little water so it doesn't dry out."
+  },
+  {
+    "id": 24,
+    "question": "Where can I find allergy information?",
+    "answer": "Each product detail page has an 'Allergens' section (e.g., nuts, dairy, wheat, fish, prawns). If in doubt, please ask us before ordering."
+  },
+  {
+    "id": 25,
+    "question": "Can I customize the spice level?",
+    "answer": "Yes, at checkout you can choose from the 'Spice Level' option: mild, medium, or hot. For some dishes (like Shorisha Ilish), reducing heat is possible but may alter the taste."
+  },
+  {
+    "id": 26,
+    "question": "Are there mild options for children?",
+    "answer": "Yes, Morog Polao, Bhuna Khichuri, Chingri Malaikari, Phirni, etc., are mild. If you add a note in your order, we can reduce the spice."
+  },
+  {
+    "id": 27,
+    "question": "Do you have vegetarian food?",
+    "answer": "Limited. Alu Bhorta, Begun Bhorta, Cholar Dal, Luchi, some sweets and Pitha are vegetarian. However, our kitchen also cooks meat, so we cannot guarantee completely vegetarian."
+  },
+  {
+    "id": 28,
+    "question": "Is the fish fresh?",
+    "answer": "Yes, we buy fresh fish every morning. Hilsa, Rui, Pabda, Prawns—all fresh. Dry fish (Shutki) is stored separately."
+  },
+  {
+    "id": 29,
+    "question": "Is the mutton/beef from Qurbani?",
+    "answer": "Regularly, we use halal butcher meat. During Eid-ul-Adha, if requested, we accept orders with Qurbani meat (separate pre-order)."
+  },
+  {
+    "id": 30,
+    "question": "Are Pitha available year-round?",
+    "answer": "Bhapa, Patishapta, Nokshi Pitha are usually available in winter (November–February). Other times, sweets and desserts are available."
+  },
+  {
+    "id": 31,
+    "question": "What should I do if the food is spoiled or wrong?",
+    "answer": "Call our hotline (01XXXXXXXXX) within 30 minutes of delivery or send a photo via WhatsApp. After verification, we will offer a refund or replacement."
+  },
+  {
+    "id": 32,
+    "question": "What is the refund policy?",
+    "answer": "If due to our mistake the food is spoiled, wrong item, or quality issue, we offer a 100% refund or a discount on your next order. We do not accept returns for customer's personal reasons (as food is perishable)."
+  },
+  {
+    "id": 33,
+    "question": "How will I receive order confirmation?",
+    "answer": "Immediately after ordering, you will receive an SMS and email with your order ID, item list, total bill, and delivery time."
+  },
+  {
+    "id": 34,
+    "question": "What are customer support hours?",
+    "answer": "Daily from 9 AM to 10 PM. Email is 24 hours. For urgent matters, call the hotline."
+  },
+  {
+    "id": 35,
+    "question": "What if I have trouble ordering on the website?",
+    "answer": "Refresh the page, clear browser cache, or try another browser. If the problem persists, call our hotline and we will take your order over the phone."
+  },
+  {
+    "id": 36,
+    "question": "Can I place bulk orders or catering?",
+    "answer": "Yes, we accept bulk orders for weddings, birthdays, office parties, or events. For more than 50 people, pre-order at least 24 hours in advance. Custom menus are also possible."
+  },
+  {
+    "id": 37,
+    "question": "Where can I find the ingredient list?",
+    "answer": "Each product detail page has an 'Ingredients' section. For more details, send us a message."
+  },
+  {
+    "id": 38,
+    "question": "Where can I leave a review?",
+    "answer": "After receiving your food, you can click 'Write a Review' on the product page to give a rating and comment. Your review will help other customers."
+  },
+  {
+    "id": 39,
+    "question": "Do the food prices remain the same every day?",
+    "answer": "Prices may vary slightly depending on market rates and ingredients. However, the price you see on the website at the time of ordering is what applies."
+  },
+  {
+    "id": 40,
+    "question": "Will I get a refund if the food arrives cold?",
+    "answer": "Inside Dhaka, it is our responsibility to deliver hot food. If it arrives cold, let us know and we will offer a discount on your next order or a partial refund. For outside Dhaka, we cannot control the courier, but we pack in a way that minimizes heat loss."
+  }
+]
