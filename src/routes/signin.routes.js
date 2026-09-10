@@ -10,9 +10,10 @@ module.exports = () => {
 
     res.cookie('token',token,{
       httpOnly:true,
-      secure:true,
+      secure:false,
       sameSite:'strict'
     })
+    .send({success :true})
   })
   return router;
 };
