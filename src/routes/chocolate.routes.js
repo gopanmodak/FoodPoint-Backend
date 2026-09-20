@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 const chocolate = require("../data/Chocolate.json");
+const chocolateCollection = require("../model/chocolateModel");
 
-module.exports = (db) => {
-  const chocolateCollection = db.collection("chocolate");
 
   // POST method
   router.post("/", async (req ,res) => {
@@ -15,7 +14,7 @@ module.exports = (db) => {
       }
 
       const result = await chocolateCollection.insertMany(chocolate);
-      res.send({ insertedCount: result.insertedCount });
+      res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Chocolate insert failed", error: error.message });
     }
@@ -24,12 +23,28 @@ module.exports = (db) => {
   // GET method
   router.get("/", async (req, res)=> {
     try {
-      const result = await chocolateCollection.find().toArray();
+      const result = await chocolateCollection.find()
       res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Chocolate fetch failed", error: error.message });
     }
   });
 
-  return router;
-};
+  //get single single chocolate
+  router.get("/:id",async (req,res) => {
+    try {
+      const id =req.params.id;
+       const result = await chocolateCollection.findById(id)
+      res.send(result);
+      
+    } catch (error) {
+      res.status(500).send({
+        message:"Chocolate not  found by id",
+        error:error.message
+      })
+      
+    }
+    
+  })
+  module.exports = router;
+

@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const drinks = require("../data/Drinks.json");
+const drinksCollection = require("../model/drinksModel");
 
-module.exports = (db) => {
-  const drinksCollection = db.collection("drinks");
+
 
   // POST method
   router.post("/", async (req, res) => {
@@ -17,9 +17,7 @@ module.exports = (db) => {
       }
 
       const result = await drinksCollection.insertMany(drinks);
-      res.send({
-        insertedCount: result.insertedCount
-      });
+      res.send(result);
     } catch (error) {
       res.status(500).send({
         message: "Error inserting drinks",
@@ -31,7 +29,7 @@ module.exports = (db) => {
   // GET method
   router.get("/", async (req, res) => {
     try {
-      const result = await drinksCollection.find().toArray(); 
+      const result = await drinksCollection.find()
       res.send(result);
     } catch (error) {
       res.status(500).send({
@@ -41,5 +39,22 @@ module.exports = (db) => {
     }
   });
 
-  return router;
-};
+    //get single drinks
+  
+      router.get("/:id",async (req,res) => {
+        try {
+          const id =req.params.id;
+           const result = await drinksCollection.findById(id)
+          res.send(result);
+          
+        } catch (error) {
+          res.status(500).send({
+            message:"Chocolate not  found by id",
+            error:error.message
+          })
+          
+        }
+        
+      })
+
+module.exports = router;

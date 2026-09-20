@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const sandwich = require("../data/Sandwich.json");
+const sandwichCollection = require ('../model/sandwichModel')
 
-module.exports = (db) => {
-  const sandwichCollection = db.collection("sandwiches");
+
 
   // POST method
   router.post("/", async (req ,res) => {
@@ -15,7 +15,7 @@ module.exports = (db) => {
       }
 
       const result = await sandwichCollection.insertMany(sandwich);
-      res.send({ insertedCount: result.insertedCount });
+      res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Sandwiches insert failed", error: error.message });
     }
@@ -24,12 +24,30 @@ module.exports = (db) => {
   //  GET method 
   router.get("/", async (req, res)=> {
     try {
-      const result = await sandwichCollection.find().toArray();
+      const result = await sandwichCollection.find()
       res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Sandwiches fetch failed", error: error.message });
     }
   });
 
-  return router;
-};
+//get single sandwich
+
+    router.get("/:id",async (req,res) => {
+      try {
+        const id =req.params.id;
+         const result = await sandwichCollection.findById(id)
+        res.send(result);
+        
+      } catch (error) {
+        res.status(500).send({
+          message:"sandwich are not  found by id",
+          error:error.message
+        })
+        
+      }
+      
+    })
+
+
+module.exports = router

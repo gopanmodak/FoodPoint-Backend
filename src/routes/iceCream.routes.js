@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const iceCream = require("../data/IceCream.json");
+const iceCreamCollection = require("../model/iceCreamModel");
 
-module.exports = (db) => {
-  const iceCreamCollection = db.collection("iceCream");
+
 
   // POST method
   router.post("/", async (req ,res) => {
@@ -15,7 +15,7 @@ module.exports = (db) => {
       }
 
       const result = await iceCreamCollection.insertMany(iceCream);
-      res.send({ insertedCount: result.insertedCount });
+      res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Ice Cream insert failed", error: error.message });
     }
@@ -24,12 +24,29 @@ module.exports = (db) => {
   // GET method
   router.get("/", async (req, res)=> {
     try {
-      const result = await iceCreamCollection.find().toArray();
+      const result = await iceCreamCollection.find()
       res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Ice Cream fetch failed", error: error.message });
     }
   });
 
-  return router;
-};
+   //get single icecream
+    router.get("/:id",async (req,res) => {
+      try {
+        const id =req.params.id;
+         const result = await iceCreamCollection.findById(id)
+        res.send(result);
+        
+      } catch (error) {
+        res.status(500).send({
+          message:"Icecream not  found by id",
+          error:error.message
+        })
+        
+      }
+      
+    })
+
+
+module.exports = router

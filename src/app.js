@@ -1,84 +1,68 @@
 const express = require("express");
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
 
 const app = express();
 
 //middleware
 app.use(express.json());
-app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://food-point-bay.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: ["http://localhost:5173"],
     credentials: true,
   }),
 );
-//database connecttion
-
-const { connectDB, getDB } = require("./db.js");
 
 //routes
-const bbqFood = require("./routes/bbq.routes.js");
-const banglaFood = require("./routes/banglaFood.routes.js");
-const featureFood = require("./routes/featurefood.routes.js");
-const breads = require("./routes/breads.routes.js");
-const bestFoods = require("./routes/bestFood.routes.js");
-const burger = require("./routes/burger.routes.js");
-const chocolate = require("./routes/chocolate.routes.js");
-const desserts = require("./routes/desserts.routes.js");
-const steak = require("./routes/steaks.routes.js");
-const drinks = require("./routes/drinks.routes.js");
-const friedChicken = require("./routes/friedChicken.routes.js");
-const iceCream = require("./routes/iceCream.routes.js");
-const indianFoods = require("./routes/indianFood.routes.js");
-const ourFoods = require("./routes/ourFood.routes.js");
-const pizza = require("./routes/pizza.routes.js");
-const sandwich = require("./routes/sandwich.routes.js");
-const sausages = require("./routes/sausage.routes.js");
-const menu = require("./routes/menu.routes.js");
-const signin = require("./routes/signin.routes.js");
-const faq = require("./routes/faq.routes.js");
+const bbqRoutes = require("./routes/bbq.routes");
+const bestFoods = require("./routes/bestFood.routes");
+const featureFoods =require("./routes/featurefood.routes")
+const breadsFoods =require("./routes/breads.routes")
+const chocolates =require("./routes/chocolate.routes")
+const burgerFoods =require("./routes/burger.routes")
+const banglaFoods =require("./routes/banglaFood.routes")
+const deserts =require("./routes/desserts.routes")
+const drinks =require("./routes/drinks.routes")
+const friedChicken =require("./routes/friedChicken.routes")
+const iceCream =require("./routes/iceCream.routes")
+const steaks = require('./routes/steaks.routes')
+const indianFoods = require("./routes/indianFood.routes");
+const sausages = require("./routes/sausage.routes");
+const ourFoods = require("./routes/ourFood.routes");
+const pizza = require("./routes/pizza.routes");
+const sandwich = require("./routes/sandwich.routes");
+const menu = require("./routes/menu.routes");
 
-
-const startServer = async () => {
+const runServer = () => {
   try {
-    await connectDB();
-    const db = getDB();
-
     app.get("/", (req, res) => {
-      res.send(
-        `Welcome to the Food API Server v1.0 (bbqs, banglafoods, featurefoods, breads, bestfoods, burgers, chocolates, desserts, steaks, drinks, friedchicken, icecream, indianfoods, ourfoods, pizzas, sandwiches, sausages)`,
-      );
+      res.send("Server Is Running Successfully");
     });
 
     //api endpoints
-    app.use("/bbqs", bbqFood(db));
-    app.use("/banglafoods", banglaFood(db));
-    app.use("/featurefoods", featureFood(db));
-    app.use("/breads", breads(db));
-    app.use("/bestfoods", bestFoods(db));
-    app.use("/burgers", burger(db));
-    app.use("/chocolates", chocolate(db));
-    app.use("/desserts", desserts(db));
-    app.use("/steaks", steak(db));
-    app.use("/drinks", drinks(db));
-    app.use("/friedchicken", friedChicken(db));
-    app.use("/icecream", iceCream(db));
-    app.use("/indianfoods", indianFoods(db));
-    app.use("/ourfoods", ourFoods(db));
-    app.use("/pizza", pizza(db));
-    app.use("/sandwiches", sandwich(db));
-    app.use("/sausages", sausages(db));
-    app.use("/menu", menu(db));
-  
-    app.use("/faq", faq(db));
-    app.use('/signin',signin())
+    app.use("/bbq", bbqRoutes);
+    app.use("/bestfood", bestFoods)
+    app.use('/featurefood',featureFoods)
+    app.use('/breads',breadsFoods)
+    app.use('/chocolates',chocolates)
+    app.use('/burger',burgerFoods)
+    app.use('/banglafoods',banglaFoods)
+    app.use('/deserts',deserts)
+    app.use('/drinks',drinks)
+    app.use('/friedchicken',friedChicken)
+    app.use('/icecream',iceCream)
+    app.use('/steaks',steaks)
+    app.use('/indianfoods',indianFoods)
+    app.use('/sausages',sausages)
+    app.use('/ourfoods',ourFoods)
+    app.use('/menu',menu)
+    app.use('/pizza',pizza)
+    app.use('/sandwich',sandwich)
+
   } catch (error) {
-    console.log("Server failed to start", error.message);
+    console.log("Server run error:", error);
   }
 };
 
-startServer();
+runServer();
 
 module.exports = app;

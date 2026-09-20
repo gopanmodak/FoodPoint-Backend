@@ -1,7 +1,29 @@
-require('dotenv').config();
-const app = require('./src/app.js');
-const port = process.env.PORT || 3000;
+const dotenv = require('dotenv');
+dotenv.config();
 
-app.listen(port, () =>{
-  console.log(`FoodPoint SERVER is Running in port ${port}`)
+const app = require('./src/app.js')
+const connectDB = require('./src/db.js')
+
+
+const port = process.env.PORT || 3000
+
+
+
+connectDB().then(()=>{
+  try {
+
+    app.listen(port,()=>{
+      console.log(`Server is running on port ${port}`)
+    })
+    
+  } catch (error) {
+  
+    console.log('Server not Start',error)
+  }
 })
+
+
+
+
+
+

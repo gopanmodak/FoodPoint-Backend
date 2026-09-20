@@ -1,25 +1,17 @@
-require('dotenv').config();
-const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@foodpoint.bftrbtn.mongodb.net/?appName=FoodPoint`;
+const dotenv = require("dotenv");
+dotenv.config();
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-let db;
+const mongoose = require("mongoose");
+const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@foodpoint.bftrbtn.mongodb.net/FoodPoint?retryWrites=true&w=majority`;
+
 const connectDB = async () => {
   try {
-    await client.connect();
-    db = await client.db("FoodPoint");
-    console.log("Databse connected");
+    await mongoose.connect(uri);
+    console.log("Database Connected");
   } catch (error) {
-    console.log("Database failed to connected", error.message);
+    console.log("Db Connection Error", error)
+    /* process.exit(1); */
   }
 };
 
-const getDB = () => db;
-module.exports = { connectDB, getDB };
+module.exports = connectDB;

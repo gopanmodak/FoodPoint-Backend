@@ -1,45 +1,57 @@
 const express = require("express");
 const router = express.Router();
 
-const featureFood = require("../data/FeatureFood.json");
+const foods = require("../data/FeatureFood.json");
+const featureFoods = require("../model/featureFoodsModel");
 
-module.exports = (db) => {
-  const featureFoodCollection = db.collection("featureFood");
-  //POST methode
-
-  router.post("/", async (req, res) => {
-    try {
-      const count = await featureFoodCollection.countDocuments();
-      if (count > 0) {
-        return res.status(400).send({
-          message: "Data already added",
-        });
-      }
-      const result = await featureFoodCollection.insertMany(featureFood);
-      res.status(200).send({
-        insertedCount: result.insertedCount,
-      });
-    } catch (error) {
-      res.status(500).send({
-        message: "Data Fetch failed 2",
-        error: error.message,
+//post
+router.post("/", async (req, res) => {
+  try {
+    const count = await featureFoods.countDocuments();
+    if (count > 0) {
+      return res.status(400).send({
+        message: "Feature Foods already added",
       });
     }
-  });
 
-  //GET methode
+    const result = await featureFoods.insertMany(foods);
+    res.send(result);
+  } catch (error) {
+    res.status(500).send({
+      message: "Feature Food Insert Failed", 
+      error: error.message,
+    });
+  }
+});
 
-  router.get("/", async (req, res) => {
-    try {
-      const result = await featureFoodCollection.find().toArray();
-      res.status(200).send(result);
-    } catch (error) {
-      res.status(500).send({
-        message: "Data Fetch failed",
-        error: error.message,
-      });
-    }
-  });
+//get
+router.get("/", async (req,res)=>{
+  try {
+    const result =await featureFoods.find();
+    res.send(result)
+    
+  } catch (error) {
+    res.status(500).send({
+      message:"Feature food not found",
+      error: error.message
+    })
+    
+  }
+})
 
-  return router;
-};
+//get food by id
+router.get('/:id',async (req,res) =>{
+  try {
+    const id = req.params.id;
+    const result = await featureFoods.findById(id);
+    res.send(result);
+    
+  } catch (error) {
+    res.status(500).send({
+      message:"Food can not found by id",
+      error:error.message
+    })
+  }
+})
+
+module.exports = router;

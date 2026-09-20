@@ -1,45 +1,51 @@
 const express = require("express");
+
 const router = express.Router();
+const bbq = require("../data/bbqs.json");
+const bbqFood = require("../model/bbqModel.js");
 
-const bbqFood = require("../data/bbqs.json");
-
-module.exports = (db) => {
-  //POST methode
-  const bbqCollection = db.collection("bbqs");
-  router.post("/", async (req, res) => {
-    try {
-      const count = await bbqCollection.countDocuments();
-      if (count > 0) {
-        return res.status(400).send({
-          message: "BBQ food already exists. Duplicate insert blocked!",
-        });
-      }
-      const result = await bbqCollection.insertMany(bbqFood);
-      res.status(200).send({
-        message: "BBQ food added!",
-        insertedCount: result.insertedCount,
-      });
-    } catch (error) {
-      res.status(500).send({
-        message: " Data Fetch Failed",
-        error: error.message,
-      });
+//post bbq
+router.post("/", async (req, res) => {
+  try {
+    const count = await bbqFood.countDocuments();
+    if (count > 0) {
+      return res.status(400).send({ message: "Bbq Already added" });
     }
-  });
+    const result = await bbqFood.insertMany(bbq);
+    res.send(result);
+  } catch (error) {
+    res.status(500).send({
+      message: "Bbq insert failed",
+      error: error.message,
+    });
+  }
+});
 
-  //GET methode
+//get bbq
+router.get("/", async (req, res) => {
+  try {
+    const result = await bbqFood.find();
+    res.send(result);
+  } catch (error) {
+    res.status(500).send({
+      message: "Can get bbq",
+    });
+  }
+});
 
-  router.get("/", async (req, res) => {
-    try {
-      const result = await bbqCollection.find().toArray();
-      res.status(200).send(result);
-    } catch (error) {
-      res.status(5000).send({
-        message: "Data Fetch Error",
-        error: error.message,
-      });
-    }
-  });
+//get bbq by id
+router.get('/:id',async(req,res)=>{
+  try {
+    const id =req.params.id
+    const result = await bbqFood.findById(id);
+    res.send(result);
+    
+  } catch (error) {
+    res.status(500).send({
+      message:"Can get your peoducts"
+    })
+    
+  }
+})
 
-  return router;
-};
+module.exports = router;

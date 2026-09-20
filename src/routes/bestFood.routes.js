@@ -1,35 +1,57 @@
 const express = require("express");
 const router = express.Router();
 
-const bestFoods = require("../data/BestFood.json");
+const bestFood = require("../data/BestFood.json");
+const bestFoods = require("../model/bestFoodModel");
 
-module.exports = (db) => {
-  const bestFoodsCollection = db.collection("bestFoods");
 
-  // POST method
-  router.post("/", async (req ,res) => {
-    try {
-      const count = await bestFoodsCollection.countDocuments();
-      if (count > 0) {
-        return res.status(400).send({ message: "Best foods already added" });
-      }
-
-      const result = await bestFoodsCollection.insertMany(bestFoods);
-      res.send({ insertedCount: result.insertedCount });
-    } catch(error) {
-      res.status(500).send({ message: "Best foods insert failed", error: error.message });
+//post
+router.post("/", async (req, res) => {
+  try {
+    const count = await bestFoods.countDocuments();
+    if (count > 0) {
+      return res.status(400).send({
+        message: " Bestfood already added",
+      });
     }
-  });
 
-  // GET method
-  router.get("/", async (req, res)=> {
-    try {
-      const result = await bestFoodsCollection.find().toArray();
-      res.send(result);
-    } catch(error) {
-      res.status(500).send({ message: "Best foods fetch failed", error: error.message });
-    }
-  });
+    const result = await bestFoods.insertMany(bestFood);
+    res.send(result);
+  } catch (error) {
+    res.status(500).send({
+      message: "Best food insert failed",
+    });
+  }
+});
 
-  return router;
-};
+//get
+router.get("/", async (req, res) =>{
+  try {
+    const result = await bestFoods.find();
+    res.send(result);
+    
+  } catch (error) {
+    res.status(500).send({
+      message: "Best food can not found"
+    })
+    
+  }
+})
+
+//get best food by id
+
+router.use("/:id",async(req,res)=>{
+  try {
+    const id = req.params.id
+    const result =await bestFoods.findById(id);
+    res.send(result)
+    
+  } catch (error) {
+    res.status(500).send({
+      message: "Your best food is not found"
+    })
+    
+  }
+})
+
+module.exports = router

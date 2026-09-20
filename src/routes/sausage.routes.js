@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 const sausages = require("../data/Sausage.json");
+const sausagesCollection = require("../model/sausagesModel");
 
 
-module.exports = (db) => {
-  const sausagesCollection = db.collection("sausages");
+
 
   // POST method
   router.post("/", async (req ,res) => {
@@ -16,7 +16,7 @@ module.exports = (db) => {
       }
 
       const result = await sausagesCollection.insertMany(sausages);
-      res.send({ insertedCount: result.insertedCount });
+      res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Sausages insert failed", error: error.message });
     }
@@ -25,12 +25,30 @@ module.exports = (db) => {
   // GET method
   router.get("/", async (req, res)=> {
     try {
-      const result = await sausagesCollection.find().toArray();
+      const result = await sausagesCollection.find()
       res.send(result);
     } catch(error) {
       res.status(500).send({ message: "Sausages fetch failed", error: error.message });
     }
   });
 
-  return router;
-};
+ //get single sausages foods
+
+    router.get("/:id",async (req,res) => {
+      try {
+        const id =req.params.id;
+         const result = await sausagesCollection.findById(id)
+        res.send(result);
+        
+      } catch (error) {
+        res.status(500).send({
+          message:"sausages not  found by id",
+          error:error.message
+        })
+        
+      }
+      
+    })
+
+
+module.exports = router

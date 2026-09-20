@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 const pizza = require("../data/Pizza.json");
+const pizzaCollection = require("../model/pizzaModel");
 
-module.exports = (db) => {
-  const pizzaCollection = db.collection("pizza");
+
 
   // POST method
   router.post("/", async (req, res) => {
@@ -17,9 +17,7 @@ module.exports = (db) => {
       }
 
       const result = await pizzaCollection.insertMany(pizza);
-      res.send({
-        insertedCount: result.insertedCount,
-      });
+      res.send(result);
     } catch (error) {
       res.status(500).send({
         message: "Pizza insert failed",
@@ -31,7 +29,7 @@ module.exports = (db) => {
   // GET method
   router.get("/", async (req, res) => {
     try {
-      const result = await pizzaCollection.find().toArray();
+      const result = await pizzaCollection.find()
       res.send(result);
     } catch (error) {
       res.status(500).send({
@@ -41,5 +39,23 @@ module.exports = (db) => {
     }
   });
 
-  return router;
-};
+//get single pizza
+
+    router.get("/:id",async (req,res) => {
+      try {
+        const id =req.params.id;
+         const result = await pizzaCollection.findById(id)
+        res.send(result);
+        
+      } catch (error) {
+        res.status(500).send({
+          message:"pizza are not  found by id",
+          error:error.message
+        })
+        
+      }
+      
+    })
+
+
+module.exports = router
