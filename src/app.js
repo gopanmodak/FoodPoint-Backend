@@ -40,7 +40,7 @@ const login = require("./routes/login.routes");
 const runServer = () => {
   try {
     app.get("/", (req, res) => {
-      res.send("Server Is Running Successfully");
+      res.send("Server Is Running Successfully and Connected to Frontend....Route: bbq, bestfood, featurefood, breads, chocolates, burger, banglafoods, deserts, drinks, friedchicken, icecream, steaks, indianfoods, sausages, ourfoods, menu, pizza, sandwich, api/login, api/logout, api/signup");
     });
 
     //api endpoints
